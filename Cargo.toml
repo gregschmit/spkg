@@ -1,0 +1,13 @@
+[package]
+name = "pkg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ureq = "*"
+
+[profile.release]
+opt-level = "z"
+lto = true
+panic = 'abort'
+strip = true
