@@ -1,13 +1,21 @@
 [package]
-name = "pkg"
-version = "0.1.0"
+name = "spkg"
+version = "0.0.0"
 edition = "2021"
+description = "A system packaging and composition tool."
+authors = ["Gregory N. Schmit <schmitgreg@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/gregschmit/spkg"
+keywords = ["package", "manager", "system", "pkg"]
+categories = ["command-line-utilities", "development-tools", "development-tools::build-utils"]
 
 [dependencies]
-ureq = "*"
+clap = { version = "3.1.18", features = ["derive"] }
+ureq = "2.4.0"
 
 [profile.release]
-opt-level = "z"
+opt-level = "s"
 lto = true
-panic = 'abort'
+codegen-units = 1
+panic = "abort"
 strip = true
