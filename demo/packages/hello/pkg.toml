@@ -1,0 +1,4 @@
+version = "0.0.1"
+
+[symlinks]
+"/bin/another_hello" = "/bin/hello"

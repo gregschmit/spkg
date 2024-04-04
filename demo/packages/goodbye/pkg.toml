@@ -1,0 +1,6 @@
+version = "0.0.2"
+recipe = ["mkdir -p disty/bin", "cp src/goodbye disty/bin/."]
+dist_root = "disty"
+
+[manifest]
+"bin/goodbye" = {}

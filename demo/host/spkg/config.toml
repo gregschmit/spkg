@@ -1,0 +1,4 @@
+[source]
+repo = "https://files.schmit.net/demo"
+branch = ""                            # E.g., "stable", "unstable", or "bookworm".
+freeze = false

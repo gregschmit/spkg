@@ -1,0 +1,21 @@
+name = "demo"
+authoritative_repo = "https://files.schmit.net/demo"
+
+this_branch = "13.2"
+
+[branches."13.0"]
+labels = ["bullseye", "oldstable"]
+
+[branches."13.1"]
+labels = ["bookworm", "stable"]
+
+[branches."13.2"]
+labels = ["sid", "unstable"]
+
+[package_defaults]
+recipe = ["make build"]
+dist_root = "dist"
+
+[packages]
+hello = {}
+goodbye = { optional = true }
